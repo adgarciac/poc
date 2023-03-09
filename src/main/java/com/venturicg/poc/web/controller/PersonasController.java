@@ -6,7 +6,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -56,7 +58,7 @@ public class PersonasController {
         return "personas";
     }
     
-	@DeleteMapping(value="/personas/eliminar/{id}")
+    @RequestMapping(value="/personas/eliminar/{id}")
 	public  String eliminar(@PathVariable(value="id") int id) {
 		Persona persona = personaService.findById(id);
 
@@ -70,20 +72,29 @@ public class PersonasController {
 	}
     
     @RequestMapping("/personas/actualizar/{id}")
-    public String actualizar(@PathVariable(value="id") int id) {
-    	Persona persona = personaService.findById(id);
+    public String actualizar(@PathVariable(value="id") int id, Model model) {
+    	Persona persona = personaService.findById(id);    	
+    	model.addAttribute("persona", persona);
         return "formEdit";
     }
 	
-	@PutMapping(value = "/personas/editar/{id}")
-	public String editar(@PathVariable(value="id") int id) {
-		Persona persona = personaService.findById(id);
+	@GetMapping(value = "/personas/editar")
+	public String editar(@RequestParam("id") int id,
+            @RequestParam("nombres") String nombres,
+            @RequestParam("apellidos") String apellidos,
+            @RequestParam("pais") String pais) {		
         Map<String, Boolean> response = new HashMap<>();
 
-        Boolean bool = personaService.deleteById(persona.getId()) > 0 ?
+        Persona persona = new Persona();
+        persona.setId(id);
+        persona.setNombres(nombres);
+        persona.setApellidos(apellidos);
+        persona.setPais(pais);
+        
+        Boolean bool = personaService.update(persona) > 0 ?
                 response.put("updated", Boolean.TRUE) :
                 response.put("updated", Boolean.FALSE);
-        return "personas";
-		
+        return "personas"; 
+		 
 	}
 }

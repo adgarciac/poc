@@ -33,5 +33,8 @@ public class PersonaServiceImpl implements PersonaService {
 		return personaDAO.deleteById(id);
 	}
 
-
+	@Override
+	public int update(Persona persona) {
+		return personaDAO.update(persona);
+	}
 }

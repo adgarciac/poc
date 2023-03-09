@@ -3378,6 +3378,13 @@ var Api = /*#__PURE__*/function (_BaseApi) {
       console.log("API_URL: " + url);
       return Api["delete"](url);
     }
+  }, {
+    key: "actualizarPersonas",
+    value: function actualizarPersonas() {
+      var url = _classPrivateMethodGet(this, _getBaseEndPoint, _getBaseEndPoint2).call(this);
+      console.log("API_URL: " + url);
+      return Api.put(url);
+    }
   }]);
   return Api;
 }(_commons_BaseApi__WEBPACK_IMPORTED_MODULE_0__["default"]);
@@ -3450,26 +3457,11 @@ var Personas = /*#__PURE__*/function () {
         }, {
           data: "id",
           render: function render(data, type, row) {
-            console.log(data);
-            return "<td><a class=\"btn btn-danger btn-sm\" th:href=\"@{/personas/eliminar/{id}(id=\"+${data}+ \") }\"  " + "onclick=\"return confirm('Est\xE1s seguro que quieres eliminar?');\">Eliminar</a></td>" + "<td><a class=\"btn btn-primary btn-sm\" th:href=\"@{/personas/editar/\" + data + \"}\"  >Editar</a></td>";
+            console.log(row[0]);
+            console.log(row[1]);
+            return '<a class="btn btn-danger btn-sm" href="/personas/eliminar/' + data + '\"  ' + "onclick=\"return confirm('Est\xE1s seguro que quieres eliminar?');\">Eliminar</a></td>" + '  <td><a class="btn btn-primary btn-sm" href="/personas/actualizar/' + data + '\"  >Editar</a></td>';
           }
-        }
-        /*,
-        {   data: "acciones",
-        render: function (data, type, row) {
-        console.log(data);
-        //	th:href="@{posts/view/{postId}(postId=${post.id})}"
-        /*	return '<button onclick="location.href=\'/personas/eliminar/\''+data.id+'\';" >Eliminar </button>'; 
-        return<button  th:onclick="|window.location.href='@{/update(server=${key})}'|" > Editar </button> 
-                 th:onclick="'window.location.href=\'/update?server=' + ${key} + '\''"
-        return '<button th:onclick="window.location.href=\'@{/personas/form}\'" class="btn btn-primary">Editar</a>'; */
-        //return '<a class="btn btn-primary btn-sm" th:href="@{/personas/editar/" + ${data.id} + "}"  >Editar</a> '; 
-        //	return	"<td><a class=\"btn btn-danger btn-sm\" th:href=\"@{/personas/eliminar/{id}(id=\"+${data.id}+ \") }\"  "+ 
-        //		"onclick=\"return confirm('Est\u00E1s seguro que quieres eliminar?');\">Eliminar</a></td>";   
-        //}
-        //}
-        ],
-
+        }],
         dom: '<"datatable-header"fl><"datatable-scroll-wrap"t><"datatable-footer"ip>'
       });
     }

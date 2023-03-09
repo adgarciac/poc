@@ -10,6 +10,6 @@ public interface PersonaService {
 	int insert(Persona persona);
 	int deleteById(Integer id);
 	Persona findById(Integer id); 
-	
+	int update(Persona persona);
 
 }
