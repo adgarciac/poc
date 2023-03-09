@@ -1,4 +1,4 @@
-#Cambios
+# Cambios
 <b> 1-. Realizados </b>
  - Modificar webpack.js por webpack.config.js
  - creacion de entry en webpack.config.js
@@ -13,8 +13,8 @@
  - Se crearon con MyBatis los metodos: findAll, findById, deleteById, update.
  - Se mantiene Arquitectura.
 <b> 2-. Faltantes </b>
- - Funcionalidad de Editar y Eliminar
- - Problema en datatable render para botones editar y eliminar.
+ > Funcionalidad de Editar y Eliminar
+ > Problema en datatable render para botones editar y eliminar.
  
 <b>____________________________________________________________________________________________________________________________</b>
 
