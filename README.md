@@ -10,15 +10,17 @@
  
  - Creacion de la tabla: personas y llenado
  - Listar Personas.
- - Crear Personas.
- - Se crearon los Controller de @PostMapping, @DeleteMapping, @PutMapping
+ - Se crea Personas en Modal.
+ - Se crea Eliminar.
+ - Se crea Actualizar.
+ - Se crearon los Controller de @PostMapping, @DeleteMapping
  - RestController: @GetMapping
  - Se crearon con MyBatis los metodos: findAll, findById, deleteById, update.
  - Se mantiene Arquitectura.
  
 <b> 2-. Faltantes </b>
- > Funcionalidad de Editar y Eliminar
- > Problema en datatable render para botones editar y eliminar.
+ > Falto solo hacer Editar en Modal de Bootstrap, este se realizo con un formulario
+
  
 <b>____________________________________________________________________________________________________________________________</b>
 
