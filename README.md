@@ -1,10 +1,13 @@
 # Cambios
 <b> 1-. Realizados </b>
- - Modificar webpack.js por webpack.config.js
+ - Modificar webpack.js por webpack.config.js  (800A03EA javascript syntax JScript compilaton error)
  - creacion de entry en webpack.config.js
-     		personas: './src/main/webapp/resources/src/personas/App.js',
-		     guardarPersonas: './src/main/webapp/resources/src/personas/GuardarApp.js',
-		     eliminarPersonas: './src/main/webapp/resources/src/personas/EliminarApp.js',
+ > personas: './src/main/webapp/resources/src/personas/App.js',
+ 
+ > guardarPersonas: './src/main/webapp/resources/src/personas/GuardarApp.js',
+ 
+ > eliminarPersonas: './src/main/webapp/resources/src/personas/EliminarApp.js',
+ 
  - Creacion de la tabla: personas y llenado
  - Listar Personas.
  - Crear Personas.
@@ -12,6 +15,7 @@
  - RestController: @GetMapping
  - Se crearon con MyBatis los metodos: findAll, findById, deleteById, update.
  - Se mantiene Arquitectura.
+ 
 <b> 2-. Faltantes </b>
  > Funcionalidad de Editar y Eliminar
  > Problema en datatable render para botones editar y eliminar.
