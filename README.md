@@ -1,3 +1,23 @@
+#Cambios
+<b> 1-. Realizados </b>
+ - Modificar webpack.js por webpack.config.js
+ - creacion de entry en webpack.config.js
+     		personas: './src/main/webapp/resources/src/personas/App.js',
+		     guardarPersonas: './src/main/webapp/resources/src/personas/GuardarApp.js',
+		     eliminarPersonas: './src/main/webapp/resources/src/personas/EliminarApp.js',
+ - Creacion de la tabla: personas y llenado
+ - Listar Personas.
+ - Crear Personas.
+ - Se crearon los Controller de @PostMapping, @DeleteMapping, @PutMapping
+ - RestController: @GetMapping
+ - Se crearon con MyBatis los metodos: findAll, findById, deleteById, update.
+ - Se mantiene Arquitectura.
+<b> 2-. Faltantes </b>
+ - Funcionalidad de Editar y Eliminar
+ - Problema en datatable render para botones editar y eliminar.
+ 
+<b>____________________________________________________________________________________________________________________________</b>
+
 # Descripción del POC
 
 En el presente repositorio se incluye una POC que implementa un listado de paises. Por simplicidad se combina backend y frontend en un mismo módulo. 
