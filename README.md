@@ -21,6 +21,8 @@
 <b> 2-. Faltantes </b>
  > Falto solo hacer Editar en Modal de Bootstrap, este se realizo con un formulario
 
+# Acceso al POC 
+- Apuntar navegador a http://localhost:8080/personas/listar
  
 <b>____________________________________________________________________________________________________________________________</b>
 
